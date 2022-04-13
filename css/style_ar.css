@@ -1440,7 +1440,7 @@ header #sett {
         display: none;
     }
     .dotsdown {
-        left: 14%;
+        left: 15%;
     }
 }
 @media (max-width: 767px) {
@@ -1465,7 +1465,7 @@ header #sett {
     margin-left: 0;
     }
     .dotsdown {
-        left: 28%;
+        left: 30%;
     }
 }
 /* end LATEST EVENTS */
