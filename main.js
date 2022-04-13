@@ -117,6 +117,8 @@ let moon = document.getElementById("moon");
 let sun = document.getElementById("sun");
 let themeColor = document.querySelector("html");
 
+sun.classList.add('actived');
+
 spanButton.addEventListener("click", function () {
     // spanButton.classList.toggle("switched");
     // moon.classList.toggle("actived");
@@ -126,6 +128,9 @@ spanButton.addEventListener("click", function () {
 if (localStorage.getItem('data-theme')) {
     themeColor.setAttribute("data-theme", localStorage.getItem('data-theme'));
     if (localStorage.getItem('data-show')) {
+        toggleMod.forEach((i) => {
+            i.classList.remove('actived')
+        })
         document.querySelector(`[data-show = ${localStorage.getItem('data-show')}]`).classList.add('actived');
 }
 }
