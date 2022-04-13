@@ -112,22 +112,41 @@ let counter = setInterval(() => {
 /* 1 => switch button theme */
 let themeButton = document.querySelector(".swichbutton");
 let spanButton = document.querySelector(".spanButton");
+let toggleMod = document.querySelectorAll(".spanButton i");
 let moon = document.getElementById("moon");
 let sun = document.getElementById("sun");
 let themeColor = document.querySelector("html");
 
 spanButton.addEventListener("click", function () {
-    spanButton.classList.toggle("switched");
-    moon.classList.toggle("moon");
-    sun.classList.toggle("sun");
+    // spanButton.classList.toggle("switched");
+    // moon.classList.toggle("actived");
+    // sun.classList.toggle("actived");
 });
 /* 2 => change color */
+if (localStorage.getItem('data-theme')) {
+    themeColor.setAttribute("data-theme", localStorage.getItem('data-theme'));
+    if (localStorage.getItem('data-show')) {
+        document.querySelector(`[data-show = ${localStorage.getItem('data-show')}]`).classList.add('actived');
+}
+}
+
 sun.addEventListener("click", function () {
-    themeColor.setAttribute("data-theme", "dark");
+    window.localStorage.setItem('data-theme', 'dark');
+    window.localStorage.setItem('data-show', 'on');
+    themeColor.setAttribute("data-theme", localStorage.getItem('data-theme'));
+    window.location.reload()
 });
+
 moon.addEventListener('click', function () {
-    themeColor.setAttribute("data-theme", "light");
+    window.localStorage.setItem('data-theme', 'light');
+    window.localStorage.setItem('data-show', 'off');
+    themeColor.setAttribute("data-theme", localStorage.getItem('data-theme'));
+
+    window.location.reload()
 });
+
+
+
 
 /* Setting button */
 let settingButton = document.querySelector('.setting');
