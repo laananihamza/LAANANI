@@ -119,11 +119,6 @@ let themeColor = document.querySelector("html");
 
 sun.classList.add('actived');
 
-spanButton.addEventListener("click", function () {
-    // spanButton.classList.toggle("switched");
-    // moon.classList.toggle("actived");
-    // sun.classList.toggle("actived");
-});
 /* 2 => change color */
 if (localStorage.getItem('data-theme')) {
     themeColor.setAttribute("data-theme", localStorage.getItem('data-theme'));
