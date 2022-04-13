@@ -1605,6 +1605,8 @@ header #sett {
     text-align: center;
 }
 
+
+
 .event .content .limit .text p {
     font-size: 19px;
     line-height: 1.6;
@@ -1666,6 +1668,19 @@ header #sett {
     .event .content img {
         display: none;
     }
+    .event .content .limit {
+        width: 500px;
+    }
+    .event .content .limit .text h1 {
+        font-size: 1.8em;
+        width: fit-content;
+    }
+    .event .content .limit .text p {
+        font-size: 17px;
+    }
+    .event .content .limit .text p {
+        font-size: 17px;
+    }
 
     /* .dotsdown {
         left: 6%;
@@ -1688,6 +1703,19 @@ header #sett {
         padding: 30px 20px;
         border-radius: 0;
         /* width: 70%; */
+    }
+    .event .content .limit {
+        width: 330px;
+    }
+    .event .content .limit .text h1 {
+        font-size: 1.8em;
+        width: fit-content;
+    }
+    .event .content .limit .text p {
+        font-size: 17px;
+    }
+    .event .content .limit .text p {
+        font-size: 17px;
     }
 
     .event .sub #sub {
@@ -2308,6 +2336,7 @@ i[class *='sun'] {
     /* right: 50%; */
     transform: translate(-50%, -50%);
 }
+
 /* 
 i.sun {
     display: none;
@@ -2347,14 +2376,15 @@ i[class *='moon'] {
         top: 55%;
         transform: translate(-50%, -50%);
     }
+
     i[class *='sun'] {
-        
+
         position: absolute;
         top: 10px;
         left: -18px;
         transform: translate(-50%, -50%);
     }
-    
+
     i[class *='moon'] {
         position: absolute;
         top: 10px;
@@ -2377,6 +2407,7 @@ i[class *='moon'] {
         /* transform: translate(-50%, -50%); */
     }
 }
-i[class *= 'actived'] {
+
+i[class *='actived'] {
     display: block;
 }
