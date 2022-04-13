@@ -127,7 +127,7 @@ if (localStorage.getItem('data-theme')) {
             i.classList.remove('actived')
         })
         document.querySelector(`[data-show = ${localStorage.getItem('data-show')}]`).classList.add('actived');
-}
+    }
 }
 
 sun.addEventListener("click", function () {
