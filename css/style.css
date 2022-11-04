@@ -3,6 +3,8 @@
 }
 
 html {
+    -webkit-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
     scroll-behavior: smooth;
 }
 
@@ -69,6 +71,17 @@ html {
     --placeholder-color: rgb(177, 177, 177);
 }
 
+#scrollNav {
+    position: fixed;
+    top: 0;
+    width: 0;
+    transition: .1s;
+    z-index: 100;
+    height: 4px;
+    background-color: var(--main-color);
+    display: none;
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -82,15 +95,27 @@ body {
     color: var(--body-color);
 }
 
+@media (max-width: 767px) {
+    #scrollNav {
+        display: none;
+    }
+}
+
 @media (min-width: 768px) {
     .container {
         width: 750px;
     }
+
+
 }
 
 @media (min-width: 991px) {
     .container {
         width: 970px;
+    }
+
+    #scrollNav {
+        display: block;
     }
 }
 
@@ -99,6 +124,7 @@ body {
         width: 1170px;
     }
 }
+
 
 /* Start Header */
 header {
@@ -283,6 +309,7 @@ header .confg .theme-color {
 header .confg .lang {
     padding: 30px;
     z-index: 5;
+    -webkit-user-select: none;
     user-select: none;
 }
 
@@ -585,6 +612,7 @@ header #sett {
 
 .head-cadr h1 {
     margin: 0.67em auto;
+    width: -moz-fit-content;
     width: fit-content;
     text-transform: uppercase;
     border: 2px solid var(--head-h1-border);
@@ -593,6 +621,7 @@ header #sett {
     position: relative;
     transition: 0.2s;
     z-index: 0;
+    -webkit-user-select: none;
     user-select: none;
 }
 
@@ -724,9 +753,16 @@ header #sett {
     transition: var(--main-transition);
 }
 
-.articles .gridBox .box img {
-    max-width: 100%;
+.articles .gridBox .box .image {
+    width: 100%;
     height: 193px;
+    overflow: hidden;
+}
+
+.articles .gridBox .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .articles .gridBox .box .text {
@@ -1010,12 +1046,14 @@ header #sett {
 }
 
 .features .posts .column .more {
+    width: -moz-fit-content;
     width: fit-content;
-    border: 3px solid;
+    border: 1px solid;
     margin: auto auto 50px;
     padding: 15px 31px;
     border-radius: 7px;
     position: relative;
+    overflow: hidden;
 }
 
 .features .posts .column .more::after {
@@ -1223,6 +1261,7 @@ header #sett {
 }
 
 .members .ship .box .text {
+    width: -moz-fit-content;
     width: fit-content;
     margin: 15px auto;
     padding-bottom: 10px;
@@ -1626,6 +1665,7 @@ header #sett {
 
 .event .sub {
     background-color: var(--works-color);
+    width: -moz-fit-content;
     width: fit-content;
     padding: 30px;
     margin: 70px auto;
@@ -1661,6 +1701,7 @@ header #sett {
     color: white;
     border-radius: 50px;
     cursor: pointer;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -1668,16 +1709,21 @@ header #sett {
     .event .content img {
         display: none;
     }
+
     .event .content .limit {
         width: 500px;
     }
+
     .event .content .limit .text h1 {
         font-size: 1.8em;
+        width: -moz-fit-content;
         width: fit-content;
     }
+
     .event .content .limit .text p {
         font-size: 17px;
     }
+
     .event .content .limit .text p {
         font-size: 17px;
     }
@@ -1704,16 +1750,21 @@ header #sett {
         border-radius: 0;
         /* width: 70%; */
     }
+
     .event .content .limit {
         width: 330px;
     }
+
     .event .content .limit .text h1 {
         font-size: 1.8em;
+        width: -moz-fit-content;
         width: fit-content;
     }
+
     .event .content .limit .text p {
         font-size: 17px;
     }
+
     .event .content .limit .text p {
         font-size: 17px;
     }
@@ -1820,6 +1871,7 @@ header #sett {
 .plan .content .box .link {
     padding: 15px 20px;
     border: 2px solid var(--main-color);
+    width: -moz-fit-content;
     width: fit-content;
     margin: 30px auto;
     border-radius: 5px;
@@ -1967,6 +2019,7 @@ header #sett {
 
 .stats h2 {
     margin: 0 auto 37px;
+    width: -moz-fit-content;
     width: fit-content;
     position: relative;
     font-size: 40px;

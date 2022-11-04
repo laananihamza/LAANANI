@@ -32,6 +32,9 @@ window.onscroll = function () {
         }
     }
 
+    // horizontal stoller
+    document.querySelector('#scrollNav').style.width = `${window.scrollY / 135}%`;
+
 }
 
 
