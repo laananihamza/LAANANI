@@ -86,7 +86,7 @@ document.addEventListener("click", function HideEl(el) {
 })
 
 /* Coundown Time */
-let time = new Date("Jan 1, 2023 00:00:00").getTime();
+let time = new Date("Jan 1, 2025 00:00:00").getTime();
 
 
 
