@@ -102,7 +102,7 @@ let counter = setInterval(() => {
     document.getElementById("mins").innerHTML = mins < 10 ? `0${mins}` : mins;
     document.getElementById("sec").innerHTML = secs < 10 ? `0${secs}` : secs;
     if (counter <= 0) {
-        clearInterval();
+        clearInterval(counter);
         document.getElementById("days").innerHTML = "00";
         document.getElementById("hour").innerHTML = "00";
         document.getElementById("mins").innerHTML = "00";
